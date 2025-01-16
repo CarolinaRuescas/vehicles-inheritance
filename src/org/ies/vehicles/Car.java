@@ -14,12 +14,12 @@ public class Car extends Vehicle{
 
     public void showInfo() {
         System.out.println("Datos del vehículo:");
-        System.out.println("El coche tiene " + doors + " puertas, es de" + horsepower + "CV, tiene hechos " + km + "kilómetros, y su matrícula es" + plate + ".");
+        System.out.println("El coche tiene " + doors + " puertas, es de " + horsepower + " CV, tiene hechos " + km + " kilómetros, y su matrícula es " + plate + ".");
     }
 
     @Override
     public void move() {
-        System.out.println("El vehículo ha recorrido " + km + "Kilometros más");
+        System.out.println("El vehículo ha recorrido " + km + " Kilometros más");
     }
 
     public int getDoors() {

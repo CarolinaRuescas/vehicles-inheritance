@@ -18,7 +18,7 @@ public class Truck extends Vehicle {
     @Override
     public void showInfo() {
         System.out.println("Datos del vehículo:");
-        System.out.println("El camión tiene " + axes + " ejes, tiene hechos " + km + "kilómetros, y su matrícula es" + plate + ".");
+        System.out.println("El camión tiene " + axes + " ejes, tiene hechos " + km + " kilómetros, y su matrícula es " + plate + ".");
     }
 
     public int getAxes() {
