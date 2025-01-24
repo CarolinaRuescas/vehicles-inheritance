@@ -1,4 +1,4 @@
-package org.ies.vehicles;
+package org.ies.vehicles.model;
 
 import java.util.Objects;
 
@@ -11,7 +11,10 @@ public abstract class Vehicle {
         this.km = km;
     }
 
-    public abstract void move();
+    public  void move(int distance){
+        km += distance;
+        System.out.println("Recorridos" + distance + " más");
+    }
     public abstract void showInfo();
 
     public int getKm() {

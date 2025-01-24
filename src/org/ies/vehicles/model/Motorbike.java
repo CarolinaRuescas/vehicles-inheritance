@@ -1,8 +1,8 @@
-package org.ies.vehicles;
+package org.ies.vehicles.model;
 
 import java.util.Objects;
 
-public class Motorbike extends Vehicle{
+public class Motorbike extends Vehicle {
     private int displacement;
 
     public Motorbike(String plate, int km, int displacement) {
@@ -17,8 +17,8 @@ public class Motorbike extends Vehicle{
     }
 
     @Override
-    public void move() {
-        System.out.println("El vehículo ha recorrido " + km + " Kilometros más");
+    public void move(int distance) {
+        super.move(distance);
     }
 
     public int getDisplacement() {

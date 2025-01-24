@@ -1,20 +1,27 @@
 package org.ies.vehicles;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import org.ies.vehicles.components.CarReader;
+import org.ies.vehicles.components.MotorbikeReader;
+import org.ies.vehicles.components.TruckReader;
+import org.ies.vehicles.components.VehicleReader;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        var truck = new Truck("5628GMJ",12000, 3);
-        var car = new Car("6325GVM", 52000, 5, 120);
-        var motorbike = new Motorbike("0215FGM", 64000, 150);
+        var scanner = new Scanner(System.in);
+        var carReader = new CarReader(scanner);
+        var motorbikeReader = new MotorbikeReader(scanner);
+        var truckReader = new TruckReader(scanner);
+        var vehicleReader = new VehicleReader(
+                scanner,
+                carReader,
+                motorbikeReader,
+                truckReader
+        );
 
-        truck.showInfo();
-        truck.move();
+        var vehicle = vehicleReader.read();
 
-        car.showInfo();
-        car.move();
-
-        motorbike.showInfo();
-        motorbike.move();
+        vehicle.showInfo();
     }
 }
